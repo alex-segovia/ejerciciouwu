@@ -19,16 +19,32 @@
             </div>
         </form>
 
-        <!-- COMPLETAR -->
-        <!-- COMPLETAR -->
-            <table class="table table-sm" th:if="${}">
+            <table class="table table-sm">
                 <thead>
                 <tr>
-                    <!-- COMPLETAR -->
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Puesto</th>
+                    <th>Departamento</th>
+                    <th>Ciudad</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                <!-- COMPLETAR -->
+                <tr th:each="employee,info: ${listaEmpleados}">
+                    <td th:text="${info.index+1}"> </td>
+                    <td th:text="${employee.nombre}"></td>
+                    <td th:text="${employee.apellido}"></td>
+                    <td th:text="${employee.puesto}"></td>
+                    <td th:text="${employee.departamento}"></td>
+                    <td th:text="${employee.ciudad}"></td>
+                    <td><a class="btn btn-primary" th:href="@{'/employee/editarEmpleado' + '?id=' + ${employee.id}}">Editar</a>
+                    </td>
+                    <td><a class="btn btn-danger" th:href="@{'/employee/borrarEmpleado' + '?id=' + ${employee.id}}">Borrar</a></td>
+
+                </tr>
                 </tbody>
             </table>
         </div>
