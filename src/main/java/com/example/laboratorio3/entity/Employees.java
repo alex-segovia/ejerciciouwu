@@ -1,15 +1,14 @@
 package com.example.laboratorio3.entity;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Date;
 
 @Entity
+@Table(name = "employees")
 public class Employees {
 
     @Id
