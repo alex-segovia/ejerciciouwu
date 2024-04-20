@@ -1,16 +1,25 @@
 package com.example.laboratorio3.controller;
 
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 //COMPLETAR
+@RequestMapping(value = {"/EmployeeIndex"}, method = RequestMethod.GET)
 public class EmployeeController {
 
-    //COMPLETAR
-
-    public String listaEmployee(   ){
-        //COMPLETAR
+    @GetMapping("/listaEmpleado")
+    public String listar() {
+        return "employee/lista";
     }
 
+
+    //COMPLETAR
+    @GetMapping(value = {"/nuevoEmpleado"})
     public String nuevoEmployeeForm( ) {
-        //COMPLETAR
+        return "employee/newFrm";
     }
 
 
@@ -18,9 +27,9 @@ public class EmployeeController {
         //COMPLETAR
     }
 
-
+    @GetMapping(value = {"/editarEmpleado"})
     public String editarEmployee() {
-        //COMPLETAR
+        return "employee/editFrm";
     }
 
 
