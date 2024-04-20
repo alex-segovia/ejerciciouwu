@@ -5,12 +5,12 @@ public class EmployeeController {
 
     //COMPLETAR
 
-    public String listaEmployee(   ){
-        //COMPLETAR
+    public String listaEmployee(){
+        return "employee/lista";
     }
 
     public String nuevoEmployeeForm( ) {
-        //COMPLETAR
+        return "employee/newFrm";
     }
 
 
@@ -20,7 +20,7 @@ public class EmployeeController {
 
 
     public String editarEmployee() {
-        //COMPLETAR
+        return "employee/editFrm";
     }
 
 
