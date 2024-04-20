@@ -12,23 +12,18 @@
     <div class="container">
         <h1>Historial de empleados</h1>
         <div class="row">
+            <form th:action="@{'/historialBuscar'}" method="get">
             <div class="col-10">
-                <input type="text" placeholder="Texto a buscar" name="search">
+                    <input type="text" placeholder="Texto a buscar" name="text">
             </div>
             <div class="col-1">
-                <a class="bg-primary-light" th:href="@{'/'}">Buscar</a>
+                <button type="submit" class="bg-primary-light">Buscar</button>
             </div>
             <div class="col-1">
-                <a class="bg-danger-light" th:href="@{'/'}">Limpiar</a>
+                <a class="bg-danger-light" th:href="@{'/historial'}">Limpiar</a>
             </div>
+            </form>
         </div>
-        <a class="btn btn-primary mt-4 mb-4" th:href="@{'/'}"></a>
-        <form class="input-group mb-lg-3" method="post" th:action="@{/}">
-            <!-- COMPLETAR -->
-            <div class="input-group-append">
-                <!-- COMPLETAR -->
-            </div>
-        </form>
 
             <table class="table table-sm">
                 <thead>
