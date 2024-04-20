@@ -1,7 +1,6 @@
 package com.example.laboratorio3.controller;
 
 import com.example.laboratorio3.entity.Employees;
-import com.example.laboratorio3.repository.EmployeesRepository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -18,13 +17,6 @@ import org.springframework.stereotype.Controller;
 @RequestMapping(value = {"/EmployeeIndex"}, method = RequestMethod.GET)
 public class EmployeeController {
 
-    final EmployeesRepository employeesRepository;
-
-    public EmployeeController(EmployeesRepository employeesRepository) {
-        this.employeesRepository = employeesRepository;
-    }
-
-
     @GetMapping("/listaEmpleado")
     public String listar(Model model) {
         List<Employees> lista = employeesRepository.findAll();
@@ -40,22 +32,13 @@ public class EmployeeController {
     }
 
 
-    public String guardarEmployee() {
-        //COMPLETAR
-    }
+
 
     @GetMapping(value = {"/editarEmpleado"})
     public String editarEmployee() {
         return "employee/editFrm";
     }
 
-
-    @GetMapping(value = {"/borrarEmpleado"})
-    public String borrarEmpleado() {
-
-       //COMPLETAR
-
-    }
 
     //COMPLETAR
 
