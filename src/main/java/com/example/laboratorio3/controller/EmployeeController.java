@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
+
+import org.springframework.stereotype.Controller;
+
+@Controller
 //COMPLETAR
 @RequestMapping(value = {"/EmployeeIndex"}, method = RequestMethod.GET)
 public class EmployeeController {
